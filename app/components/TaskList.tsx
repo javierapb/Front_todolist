@@ -19,6 +19,7 @@ export default function TaskList() {
         const data = await res.json()
         setTasks(data)
       } catch (err) {
+        console.log(err)
         setError("Error fetching tasks. Please try again later.")
       } finally {
         setIsLoading(false)
